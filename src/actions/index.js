@@ -1,3 +1,17 @@
 import types from './types';
-BASE_URL = 'http://api.reactprototypes.com/todos';
-API_KEY = '?key=c_918demouser';
+import axios from 'axios';
+
+
+const BASE_URL = 'http://api.reactprototypes.com/todos';
+const API_KEY = '?key=c_918demouser';
+
+export function getListData(){
+
+    const resp = axios.get(BASE_URL + API_KEY);
+
+    return {
+        type:types.GET_ALL_LIST_DATA,
+        payload: resp
+    }
+
+}
