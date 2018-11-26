@@ -9,8 +9,11 @@ const DEFAULT_STATE = {
 export default (state = DEFAULT_STATE, action) => {
     switch(action.type){
         case types.GET_ALL_LIST_DATA:
-            console.log('list reducerrrrrr', action)
+
             return { ...state, all: action.payload.data.todos };
+        case types.GET_SINGLE_ITEM:
+            return {...state, single: action.payload.data.todo};
+
         default:
             return state;
     }
