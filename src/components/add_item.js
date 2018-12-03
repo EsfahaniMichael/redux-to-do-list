@@ -66,7 +66,7 @@ function validate(formValues){
     }
 
     if (!formValues.details){
-        error.details = 'Please give yout to do items some details'
+        error.details = 'Please give your to do items some details'
     }
     return error;
 }

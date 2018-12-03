@@ -26,7 +26,6 @@ class List extends Component {
                 <ul className="collection">
                     {listElements}
                 </ul>
-
             </div>
         );
     }
